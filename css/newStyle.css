@@ -1,0 +1,15 @@
+* {
+  outline: 1px solid red;
+}
+
+/* Mobile view */
+@media( min-device-width: 320px ) and ( max-device-width: 760px ) {
+  .hero-moon-image {
+    background-image: url('')
+  }
+}
+
+/* Desktop View */
+@media( min-device-width: 1025px ) {
+
+}
