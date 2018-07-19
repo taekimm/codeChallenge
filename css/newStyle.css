@@ -2,14 +2,72 @@
   outline: 1px solid red;
 }
 
+/* challenge 1 */
+figure.hero-space-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+figure.hero-moon-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+div.hero-copy {
+  position: relative;
+  display: inline-block;
+  /* for <= IE 11 */
+  top: auto;
+  left: auto;
+  transform: none;
+  -webkit-transform: none;
+  /* for every other modern browser */
+  top: unset;
+  left: unset;
+  transform: unset;
+  -webkit-transform: unset; 
+}
+/* end challenge 1 */
+
 /* Mobile view */
 @media( min-device-width: 320px ) and ( max-device-width: 760px ) {
-  .hero-moon-image {
-    background-image: url('')
+  /* challenge 1*/
+  .hero-space-image {
+    background: url(../images/final-frontier_small.jpg) no-repeat center;
+    height: 500px;
   }
+
+  .hero-moon-image {
+    background: url(../images/luna_small.jpg) no-repeat center;
+    height: 500px;
+  }
+
+  .hero-copy {
+    margin: 0 20% 0 20%
+  }
+  /* end challenge 1 */
 }
 
 /* Desktop View */
 @media( min-device-width: 1025px ) {
+  /* challenge 1*/
+  section.hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr)
+  }
+  
+  .hero-space-image {
+    background: url(../images/final-frontier_large.jpg) no-repeat center;
+    background-size: cover;
+    height: 1000px;
+  }
 
+  .hero-moon-image {
+    background: url(../images/luna_large.jpg) no-repeat center;
+    background-size: cover;
+    height: 1000px;
+  }
+  /* end challenge 1 */
 }
